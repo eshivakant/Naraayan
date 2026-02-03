@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book your 1-hour video consultation with Naraayan - Expert Vedic astrology guidance via live video call.">
+    <title>1-Hour Premium Video Consultation Payment - Naraayan</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Payment page styles */
+        .payment-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .premium-badge {
+            text-align: center;
+            background: linear-gradient(135deg, #9370db, #8a2be2);
+            color: white;
+            padding: 1rem;
+            border-radius: 50px;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            box-shadow: 0 5px 20px rgba(147,112,219,0.4);
+        }
+
+        .premium-badge i {
+            margin-right: 0.5rem;
+            color: var(--mystic-gold);
+        }
+
+        .package-info {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--mystic-gold);
+            text-align: center;
+        }
+
+        .package-info h3 {
+            color: var(--mystic-gold);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .package-info .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--mystic-gold);
+            margin: 1rem 0;
+            font-family: var(--font-display);
+        }
+
+        .form-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: var(--star-white);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--star-white);
+            font-size: 1rem;
+            font-family: var(--font-primary);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--mystic-gold);
+            box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .payment-instructions {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .payment-instructions h4 {
+            color: var(--mystic-gold);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .qr-code-container {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .qr-code-container img {
+            max-width: 250px;
+            border-radius: 10px;
+            border: 2px solid var(--mystic-gold);
+        }
+
+        .submit-button {
+            display: block;
+            width: 100%;
+            background: linear-gradient(135deg, var(--mystic-gold), #ffa500);
+            color: var(--cosmic-purple);
+            border: none;
+            padding: 1.2rem;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            font-family: var(--font-primary);
+        }
+
+        .submit-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .submit-button:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .success-message {
+            background: rgba(0, 255, 0, 0.1);
+            border: 1px solid rgba(0, 255, 0, 0.3);
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            text-align: center;
+        }
+
+        .back-to-packages {
+            display: inline-block;
+            color: var(--mystic-gold);
+            text-decoration: none;
+            margin-top: 1rem;
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+        }
+
+        .back-to-packages:hover {
+            text-decoration: underline;
+        }
+
+        .payment-message {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        @media screen and (max-width: 768px) {
+            .payment-container {
+                padding: 0 1rem;
+            }
+
+            .form-section,
+            .package-info {
+                padding: 1.5rem;
+            }
+
+            .package-info .price {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    <nav class="topnav">
+        <div class="logo">
+            <a href="index.html"><img src="/title.png" alt="Naraayan"/></a>
+        </div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+        <ul class="nav-links">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="consultation-packages.html">Packages</a></li>
+            <li><a href="index.html#testimonials">Testimonials</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <div class="payment-container">
+            <h1>Complete Your Consultation Request</h1>
+
+            <!-- Package Information -->
+            <div class="package-info">
+                <h3>📹 30-Minute Video Consultation</h3>
+                <div class="price">₹2,000</div>
+                <p>Live one-on-one video consultation covering 2-3 major life areas with instant answers, 3-4 personalized remedies, and session recording.</p>
+            </div>
+
+            <!-- Consultation Form -->
+            <div id="consultation-form" class="form-section">
+                <h2>Personal Details for Video Consultation</h2>
+                <p class="payment-message">
+                    Please fill out the form below and complete your payment to book your 1-hour video session.
+                </p>
+
+                <form action="https://api.web3forms.com/submit" method="POST" id="astro-form">
+                    <input type="hidden" name="access_key" value="e7daf588-78f1-4429-8244-e1dd85754e60" />
+                    <input type="hidden" name="subject" value="New Form Submission for 30-Min Video Consultation" />
+                    <input type="checkbox" name="botcheck" style="display: none" />
+
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number (WhatsApp preferred)</label>
+                        <input type="tel" id="phone" name="phone" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" name="dob" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tob">Time of Birth</label>
+                        <input type="time" id="tob" name="tob" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pob">Place of Birth</label>
+                        <input type="text" id="pob" name="pob" placeholder="City, State, Country" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="preferred_dates">Preferred Date & Time Options (3 options)</label>
+                        <textarea id="preferred_dates" name="preferred_dates" rows="3" placeholder="Option 1: DD/MM/YYYY at HH:MM AM/PM&#10;Option 2: DD/MM/YYYY at HH:MM AM/PM&#10;Option 3: DD/MM/YYYY at HH:MM AM/PM" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="platform">Preferred Video Platform</label>
+                        <select id="platform" name="platform" required>
+                            <option value="">Select platform</option>
+                            <option value="Google Meet">Google Meet</option>
+                            <option value="Zoom">Zoom</option>
+                            <option value="WhatsApp Video">WhatsApp Video</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="topics">Areas You'd Like to Discuss (2-3 topics)</label>
+                        <textarea id="topics" name="topics" rows="3" placeholder="e.g., Career guidance, Relationship questions, Health concerns" required></textarea>
+                    </div>
+
+                    <!-- UPI QR Code -->
+                    <div class="payment-instructions">
+                        <h4>Complete Your Payment</h4>
+                        <p>Scan the QR code below to pay ₹2,000 using UPI</p>
+                        <div class="qr-code-container">
+                            <img src="UPI.png" alt="UPI QR Code" />
+                        </div>
+                        <p>After payment, enter your Transaction ID below:</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="transaction_id">UPI Transaction ID</label>
+                        <input type="text" id="transaction_id" name="transaction_id" placeholder="Enter your UPI Transaction ID" required />
+                    </div>
+
+                    <button type="submit" class="submit-button">
+                        Submit Consultation Request
+                    </button>
+                </form>
+
+                <a href="consultation-packages.html" class="back-to-packages">← Back to All Packages</a>
+            </div>
+
+            <!-- Success Section -->
+            <div id="success-section" class="form-section" style="display: none">
+                <h2>Video Consultation Booked!</h2>
+                <div class="success-message">
+                    Thank you! Your 1-hour video consultation request has been submitted successfully.
+                </div>
+                <p>We will confirm your booking and send you the meeting link within 24 hours.</p>
+                <p>You'll receive a reminder 24 hours and 1 hour before your scheduled session.</p>
+                <div class="payment-button-container">
+                    <a href="consultation-packages.html" class="submit-button" style="text-decoration: none; display: inline-block;">
+                        View All Packages
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Naraayan</h3>
+                    <p>Expert Vedic Astrology & Lal Kitab Consultations</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="consultation-packages.html">Packages</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="consultation-packages.html#quick">Quick Insight</a></li>
+                        <li><a href="consultation-packages.html#focused">Focused Consultation</a></li>
+                        <li><a href="consultation-packages.html#video-30">Video Consultations</a></li>
+                        <li><a href="consultation-packages.html#full">Full Life Analysis</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-envelope"></i> contact@naraayan.com</li>
+                        <li><i class="fas fa-phone"></i> +91-XXXXX-XXXXX</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 10 AM - 7 PM IST</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Naraayan. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .payment-container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .package-summary {
+            background: linear-gradient(145deg, rgba(147,112,219,0.2), rgba(255,215,0,0.1));
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(147,112,219,0.4);
+            border-radius: 25px;
+            padding: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 40px rgba(147,112,219,0.2);
+        }
+
+        .package-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .package-summary h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--mystic-gold), #ffa500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .package-price {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--mystic-gold);
+            margin: 1.5rem 0;
+            font-family: var(--font-display);
+            text-shadow: 0 0 20px rgba(255,215,0,0.3);
+        }
+
+        .package-details {
+            text-align: left;
+            margin-top: 2rem;
+            padding: 2rem;
+            background: rgba(0,0,0,0.3);
+            border-radius: 15px;
+        }
+
+        .package-details h3 {
+            color: var(--mystic-gold);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .package-details ul {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .package-details li {
+            padding: 0.7rem 0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .package-details i {
+            color: #00ff00;
+            font-size: 1.2rem;
+        }
+
+        .delivery-info {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(255,215,0,0.1);
+            border-radius: 10px;
+            border: 1px solid rgba(255,215,0,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+        }
+
+        .payment-instructions {
+            background: var(--gradient-card);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 25px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .payment-instructions h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--mystic-gold);
+        }
+
+        .instruction-text {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .steps-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .payment-step {
+            display: flex;
+            gap: 1.5rem;
+            padding: 2rem;
+            background: rgba(0,0,0,0.3);
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            flex-shrink: 0;
+            background: var(--gradient-gold);
+            color: var(--cosmic-purple);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .step-content h3 {
+            color: var(--mystic-gold);
+            margin-bottom: 1rem;
+        }
+
+        .payment-details {
+            background: rgba(0,0,0,0.4);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+        }
+
+        .detail-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .detail-item strong {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--mystic-gold);
+        }
+
+        .copyable {
+            background: rgba(255,215,0,0.1);
+            padding: 0.8rem 1rem;
+            border-radius: 8px;
+            display: inline-block;
+            font-family: monospace;
+            font-size: 1.1rem;
+            margin-right: 0.5rem;
+        }
+
+        .copy-btn {
+            background: var(--gradient-gold);
+            color: var(--cosmic-purple);
+            border: none;
+            padding: 0.6rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .copy-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .bank-info {
+            background: rgba(255,215,0,0.05);
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255,215,0,0.2);
+        }
+
+        .bank-info p {
+            margin: 0.5rem 0;
+        }
+
+        .details-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .details-list li {
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            position: relative;
+        }
+
+        .details-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--mystic-gold);
+            font-size: 1.5rem;
+        }
+
+        .contact-options {
+            margin-top: 2rem;
+            text-align: center;
+            padding: 2rem;
+            background: rgba(0,0,0,0.3);
+            border-radius: 15px;
+        }
+
+        .contact-options h3 {
+            color: var(--mystic-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .contact-btn.whatsapp {
+            background: #25D366;
+            color: white;
+        }
+
+        .contact-btn.whatsapp:hover {
+            background: #20b858;
+            transform: translateY(-3px);
+        }
+
+        .contact-btn.email {
+            background: var(--gradient-gold);
+            color: var(--cosmic-purple);
+        }
+
+        .contact-btn.email:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255,215,0,0.4);
+        }
+
+        .important-notes {
+            background: rgba(255,165,0,0.1);
+            border: 1px solid rgba(255,165,0,0.3);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .important-notes h3 {
+            color: #ffa500;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .important-notes ul {
+            list-style: none;
+        }
+
+        .important-notes li {
+            padding: 0.5rem 0 0.5rem 1.8rem;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .important-notes li::before {
+            content: '⚠';
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .back-link a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            color: var(--mystic-gold);
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .back-link a:hover {
+            transform: translateX(-5px);
+            color: var(--soft-gold);
+        }
+
+        @media screen and (max-width: 768px) {
+            .payment-container {
+                padding: 0 1rem;
+            }
+
+            .package-summary,
+            .payment-instructions {
+                padding: 1.5rem;
+            }
+
+            .package-summary h1 {
+                font-size: 2rem;
+            }
+
+            .package-price {
+                font-size: 2.5rem;
+            }
+
+            .payment-step {
+                flex-direction: column;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+            }
+
+            .contact-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+
+    <script>
+        function copyToClipboard(elementId) {
+            const element = document.getElementById(elementId);
+            const text = element.textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = element.nextElementSibling;
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                btn.style.background = '#00ff00';
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.style.background = '';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
