@@ -3,42 +3,389 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naraayan</title>
+    <meta name="description" content="Expert Vedic Astrology consultations by Naraayan. Get personalized Lal Kitab readings, life guidance, and cosmic insights. Book your consultation today!">
+    <meta name="keywords" content="vedic astrology, lal kitab, astrology consultation, jyotish, horoscope, life guidance">
+    <title>Naraayan - Expert Vedic Astrology & Lal Kitab Consultations</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="stars"></div>
+    
+    <!-- Navigation -->
     <nav class="topnav">
-      <div class="logo">
-        <a href="index.html"><img src="/title.png" alt="Naraayan"/></a>
-      </div>
+        <div class="logo">
+            <a href="index.html"><img src="/title.png" alt="Naraayan - Vedic Astrology"/></a>
+        </div>
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
         <label for="nav-toggle" class="nav-toggle-label">
             <span></span>
         </label>
         <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
             <li><a href="consultation-packages.html">Packages</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#faq">FAQ</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+
+    <!-- Hero Section -->
     <main>
         <section class="hero">
             <div class="hero-content">
                 <h1><img src="/logo.png" alt="Unlock Your Cosmic Path" /></h1>
-
-                <h2><strong>Welcome to Naraayan!</strong></h2>
+                <h2 class="hero-title"><strong>Welcome to Naraayan</strong></h2>
+                <p class="hero-subtitle">Your Trusted Guide to Vedic Wisdom & Life Transformation</p>
                 <p class="hero-intro">
-                    With a deep understanding of Vedic principles and intuitive guidance, we help individuals find clarity, harmony, and direction in life. Our goal is to use the timeless wisdom of Jyotish to bring balance, prosperity, and peace to all who seek it.
+                    With deep expertise in Vedic astrology and Lal Kitab principles, I offer personalized consultations 
+                    that illuminate your path, resolve challenges, and unlock your true potential. Experience ancient 
+                    wisdom tailored for modern life.
                 </p>
-                <br />
-                <br />
-                <a href="consultation-packages.html" class="package-button">Explore Your Destiny</a>
+                <div class="hero-buttons">
+                    <a href="consultation-packages.html" class="cta-primary">Book Consultation</a>
+                    <a href="#about" class="cta-secondary">Learn More</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4.9★</span>
+                        <span class="stat-label">Client Rating</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title">About Naraayan</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="lead-text">
+                            Naraayan is a dedicated Vedic astrologer specializing in Lal Kitab, bringing over a decade 
+                            of experience in guiding individuals through life's complexities using the ancient science of Jyotish.
+                        </p>
+                        <p>
+                            My journey into astrology began with a profound fascination for the cosmic patterns that influence 
+                            our lives. After years of intensive study under renowned masters and practical application, I've 
+                            helped hundreds of individuals find clarity, overcome obstacles, and align with their true purpose.
+                        </p>
+                        <p>
+                            What sets my practice apart is the unique blend of traditional Lal Kitab techniques with 
+                            personalized, practical remedies that fit seamlessly into modern lifestyles. I believe astrology 
+                            should empower, not limit—providing actionable insights that create real transformation.
+                        </p>
+                        <div class="credentials">
+                            <div class="credential-item">
+                                <i class="fas fa-certificate"></i>
+                                <span>Certified Vedic Astrologer</span>
+                            </div>
+                            <div class="credential-item">
+                                <i class="fas fa-book"></i>
+                                <span>Lal Kitab Specialist</span>
+                            </div>
+                            <div class="credential-item">
+                                <i class="fas fa-users"></i>
+                                <span>500+ Consultations</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <h2 class="section-title">My Specializations</h2>
+                <p class="section-subtitle">Comprehensive astrological services tailored to your unique needs</p>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">💼</div>
+                        <h3>Career & Business</h3>
+                        <p>Strategic career guidance, business timing, partnership analysis, and professional growth insights.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">❤️</div>
+                        <h3>Relationships & Marriage</h3>
+                        <p>Compatibility analysis, relationship timing, marital harmony, and love life guidance.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🏥</div>
+                        <h3>Health & Wellness</h3>
+                        <p>Health predictions, preventive insights, recovery timing, and wellness-focused remedies.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">💰</div>
+                        <h3>Finance & Wealth</h3>
+                        <p>Financial forecasting, investment timing, wealth accumulation strategies, and prosperity remedies.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🎓</div>
+                        <h3>Education & Learning</h3>
+                        <p>Academic success guidance, exam timing, subject selection, and educational remedies.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🔮</div>
+                        <h3>Lal Kitab Remedies</h3>
+                        <p>Practical, effective Lal Kitab solutions that are easy to implement and yield powerful results.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Section -->
+        <section class="why-choose-section">
+            <div class="container">
+                <h2 class="section-title">Why Choose Naraayan</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <i class="fas fa-user-check"></i>
+                        <h3>Personalized Approach</h3>
+                        <p>Every consultation is uniquely crafted based on your birth chart and specific circumstances.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-clock"></i>
+                        <h3>Quick Turnaround</h3>
+                        <p>Receive detailed readings within 12-72 hours depending on your chosen package.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Confidential & Secure</h3>
+                        <p>Your personal information and consultations are kept completely private and secure.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <h3>Practical Remedies</h3>
+                        <p>Easy-to-follow Lal Kitab remedies that integrate seamlessly into daily life.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-comments"></i>
+                        <h3>Ongoing Support</h3>
+                        <p>Follow-up guidance available to help you implement insights and track progress.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-heart"></i>
+                        <h3>Client-Centered</h3>
+                        <p>Over 500 satisfied clients with 4.9-star average rating and countless success stories.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials-section">
+            <div class="container">
+                <h2 class="section-title">What Clients Say</h2>
+                <p class="section-subtitle">Real experiences from real people</p>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">
+                            "Naraayan's insights were incredibly accurate. The Lal Kitab remedies he suggested were simple 
+                            yet powerful. Within 3 months, I saw significant improvements in my career!"
+                        </p>
+                        <div class="testimonial-author">
+                            <strong>Priya S.</strong>
+                            <span>Software Engineer, Bangalore</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">
+                            "I was going through a difficult phase in my relationship. The consultation helped me understand 
+                            the patterns and timing. The remedies really worked wonders!"
+                        </p>
+                        <div class="testimonial-author">
+                            <strong>Rahul M.</strong>
+                            <span>Business Owner, Mumbai</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">
+                            "The annual horoscope was spot-on! It helped me plan my year strategically. Best investment 
+                            I made for personal growth. Highly recommend Naraayan!"
+                        </p>
+                        <div class="testimonial-author">
+                            <strong>Anjali K.</strong>
+                            <span>Marketing Manager, Delhi</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">
+                            "Professional, detailed, and compassionate. The video consultation was worth every rupee. 
+                            I got clarity on multiple life areas in just one session."
+                        </p>
+                        <div class="testimonial-author">
+                            <strong>Vikram P.</strong>
+                            <span>Entrepreneur, Pune</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What information do I need to provide for a consultation?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You'll need your complete birth details: date of birth, exact time of birth (as accurate as possible), 
+                            and place of birth. For specific consultations, please also mention your area of concern (career, relationship, 
+                            health, etc.).</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How long does it take to receive my reading?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Turnaround time depends on your package: Quick Insight (12 hours), Focused Consultation (24-36 hours), 
+                            Video Consultations (scheduled within 48 hours), and comprehensive packages (48-72 hours). Rush service 
+                            available upon request.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What is Lal Kitab and how is it different?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Lal Kitab is a unique system of Vedic astrology that provides simple, practical, and highly effective remedies. 
+                            Unlike traditional methods, Lal Kitab remedies are easy to implement in daily life and often show quicker results. 
+                            They focus on karmic debt resolution and practical solutions.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Can I ask follow-up questions after my consultation?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! All packages include one round of clarification questions via email/WhatsApp. For video consultations, 
+                            you can ask questions during the session. Extended support packages are also available.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Are the remedies complicated or expensive?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Not at all! Lal Kitab remedies are specifically designed to be simple, affordable, and practical. Most remedies 
+                            involve everyday items and activities that easily fit into modern lifestyles. No expensive rituals or complex procedures.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Do you offer refunds if I'm not satisfied?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>I stand behind the quality of my consultations. If you're not satisfied with your reading, please contact me 
+                            within 48 hours and I'll work with you to address your concerns or provide a partial refund on a case-by-case basis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Transform Your Life?</h2>
+                    <p>Begin your journey toward clarity, purpose, and fulfillment with personalized Vedic guidance.</p>
+                    <a href="consultation-packages.html" class="cta-primary large">View Consultation Packages</a>
+                </div>
             </div>
         </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Naraayan</h3>
+                    <p>Expert Vedic Astrology & Lal Kitab Consultations</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="consultation-packages.html">Packages</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="consultation-packages.html#quick">Quick Insight</a></li>
+                        <li><a href="consultation-packages.html#focused">Focused Consultation</a></li>
+                        <li><a href="consultation-packages.html#video">Video Consultations</a></li>
+                        <li><a href="consultation-packages.html#full">Full Life Analysis</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Naraayan. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    // Close mobile menu if open
+                    document.getElementById('nav-toggle').checked = false;
+                }
+            });
+        });
+    </script>
 </body>
 </html>

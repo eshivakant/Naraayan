@@ -3,48 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact - Naraayan</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Get in touch with Naraayan for personalized Vedic astrology consultations. Fill out our contact form or reach us via email or phone.">
+    <title>Contact Us - Naraayan Astrology</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css" />
-    <style>
-      .form-group {
-        margin-bottom: 1.5rem;
-      }
-
-      .form-group label {
-        display: block;
-        margin-bottom: 0.5rem;
-        font-weight: bold;
-        color: var(--star-white);
-      }
-
-      .form-group input,
-      .form-group select,
-      .form-group textarea {
-        width: 100%;
-        padding: 0.8rem;
-        border-radius: 8px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        background: rgba(255, 255, 255, 0.1);
-        color: var(--star-white);
-        font-size: 1rem;
-      }
-
-      .form-group input:focus,
-      .form-group select:focus,
-      .form-group textarea:focus {
-        outline: none;
-        border-color: var(--mystic-gold);
-        box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
-      }
-
-      .form-group input::placeholder,
-      .form-group textarea::placeholder {
-        color: rgba(255, 255, 255, 0.6);
-      }
-    </style>
   </head>
   <body>
     <div class="stars"></div>
@@ -52,163 +18,381 @@
       <div class="logo">
         <a href="index.html"><img src="/title.png" alt="Naraayan"/></a>
       </div>
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <input type="checkbox" id="nav-toggle" class="nav-toggle" />
       <label for="nav-toggle" class="nav-toggle-label">
         <span></span>
       </label>
       <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
         <li><a href="consultation-packages.html">Packages</a></li>
+        <li><a href="index.html#testimonials">Testimonials</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+    
     <main class="content">
-      <div class="contact-info">
-        <p>To Contact Naraayan, please fill out the form below.</p>
-        <br />
-        <br />
-        <form
-          action="https://api.web3forms.com/submit"
-          method="POST"
-          id="astro-form"
-        >
-          <input
-            type="hidden"
-            name="access_key"
-            value="e7daf588-78f1-4429-8244-e1dd85754e60"
-          />
-          <input
-            type="hidden"
-            name="subject"
-            value="New Form Submission for Contact"
-          />
-          <input type="checkbox" name="botcheck" style="display: none" />
-          <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required />
-          </div>
+      <!-- Contact Hero -->
+      <section class="contact-hero">
+        <div class="container">
+          <h1>Get In Touch</h1>
+          <p class="contact-subtitle">Have questions? Ready to book a consultation? Fill out the form below and I'll get back to you as soon as possible.</p>
+        </div>
+      </section>
 
-          <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required />
-          </div>
+      <!-- Contact Form -->
+      <section class="contact-form-section">
+        <div class="container">
+          <div class="contact-info">
+            <h2>Send a Message</h2>
+            <p>Fill out the form below and I'll get back to you as soon as possible. For consultation bookings, please include your preferred package and any specific questions.</p>
+            
+            <form action="https://api.web3forms.com/submit" method="POST" id="astro-form">
+              <input type="hidden" name="access_key" value="e7daf588-78f1-4429-8244-e1dd85754e60" />
+              <input type="hidden" name="subject" value="New Contact Form Submission - Naraayan" />
+              <input type="checkbox" name="botcheck" style="display: none" />
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name"><i class="fas fa-user"></i> Full Name *</label>
+                  <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+                </div>
 
-          <div class="form-group">
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" required />
-          </div>
+                <div class="form-group">
+                  <label for="email"><i class="fas fa-envelope"></i> Email Address *</label>
+                  <input type="email" id="email" name="email" placeholder="your@email.com" required />
+                </div>
+              </div>
 
-          <div class="form-group">
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-          </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phone"><i class="fas fa-phone"></i> Phone Number *</label>
+                  <input type="tel" id="phone" name="phone" placeholder="+91-XXXXX-XXXXX" required />
+                </div>
 
-          <button type="submit" class="package-button">Submit</button>
-        </form>
-      </div>
+                <div class="form-group">
+                  <label for="inquiry-type"><i class="fas fa-question-circle"></i> Type of Inquiry</label>
+                  <select id="inquiry-type" name="inquiry-type">
+                    <option value="">Select inquiry type</option>
+                    <option value="consultation">Consultation Booking</option>
+                    <option value="question">General Question</option>
+                    <option value="package-info">Package Information</option>
+                    <option value="follow-up">Follow-up on Existing Consultation</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject"><i class="fas fa-heading"></i> Subject *</label>
+                <input type="text" id="subject" name="subject-line" placeholder="Brief subject of your message" required />
+              </div>
+
+              <div class="form-group">
+                <label for="message"><i class="fas fa-comment"></i> Message *</label>
+                <textarea id="message" name="message" placeholder="Tell me about your inquiry or question. For consultation bookings, please mention your preferred package and any specific areas you'd like guidance on." required></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="best-time"><i class="fas fa-clock"></i> Best Time to Reach You</label>
+                <input type="text" id="best-time" name="best-time" placeholder="e.g., Weekday evenings, Weekend mornings" />
+              </div>
+
+              <button type="submit" class="submit-button">
+                <i class="fas fa-paper-plane"></i> Send Message
+              </button>
+            </form>
+
+            <div class="contact-note">
+              <p><strong>Note:</strong> All fields marked with * are required. Your information is kept confidential and used only for consultation purposes.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Additional Info Section -->
+      <section class="contact-info-section">
+        <div class="container">
+          <h2 class="section-title">Before You Contact</h2>
+          <div class="info-grid">
+            <div class="info-card">
+              <div class="info-icon"><i class="fas fa-calendar-check"></i></div>
+              <h3>Ready to Book?</h3>
+              <p>If you're ready to book a consultation, visit our packages page to select your preferred option and proceed with booking.</p>
+              <a href="consultation-packages.html" class="info-link">View Packages →</a>
+            </div>
+            <div class="info-card">
+              <div class="info-icon"><i class="fas fa-question"></i></div>
+              <h3>Have Questions?</h3>
+              <p>Check our FAQ section for answers to common questions about consultations, remedies, and the process.</p>
+              <a href="index.html#faq" class="info-link">Read FAQ →</a>
+            </div>
+            <div class="info-card">
+              <div class="info-icon"><i class="fas fa-clock"></i></div>
+              <h3>Response Time</h3>
+              <p>I typically respond within 24 hours. For urgent matters, WhatsApp is the fastest way to reach me during business hours.</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <script>
-      // Form submission handler
-      document
-        .getElementById("astro-form")
-        .addEventListener("submit", async function (e) {
-          e.preventDefault();
 
-          const form = e.target;
-          const submitButton = form.querySelector('button[type="submit"]');
-          const originalButtonText = submitButton.textContent;
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Naraayan</h3>
+            <p>Expert Vedic Astrology & Lal Kitab Consultations</p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html#about">About</a></li>
+              <li><a href="index.html#services">Services</a></li>
+              <li><a href="consultation-packages.html">Packages</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="consultation-packages.html#quick">Quick Insight</a></li>
+              <li><a href="consultation-packages.html#focused">Focused Consultation</a></li>
+              <li><a href="consultation-packages.html#video-30">Video Consultations</a></li>
+              <li><a href="consultation-packages.html#full">Full Life Analysis</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Naraayan. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+      </div>
+    </footer>
 
-          // Show loading state
-          submitButton.textContent = "Sending...";
-          submitButton.disabled = true;
-
-          try {
-            const formData = new FormData(form);
-
-            const response = await fetch(form.action, {
-              method: "POST",
-              body: formData,
-              headers: {
-                Accept: "application/json",
-              },
-            });
-
-            const result = await response.json();
-
-            if (response.ok && result.success) {
-              // Success message
-              showMessage("Message sent successfully!", "success");
-              form.reset();
-            } else {
-              // Error message from API
-              showMessage(result.message || "Something went wrong!", "error");
-            }
-          } catch (error) {
-            // Network error
-            showMessage("Network error. Please try again.", "error");
-            console.error("Form submission error:", error);
-          } finally {
-            // Reset button state
-            submitButton.textContent = originalButtonText;
-            submitButton.disabled = false;
-          }
-        });
-
-      // Function to show messages
-      function showMessage(message, type) {
-        // Remove existing messages
-        const existingMessage = document.querySelector(".form-message");
-        if (existingMessage) {
-          existingMessage.remove();
-        }
-
-        // Create message element
-        const messageEl = document.createElement("div");
-        messageEl.className = `form-message ${type}`;
-        messageEl.textContent = message;
-        messageEl.style.cssText = `
-        padding: 12px;
-        margin: 15px 0;
-        border-radius: 4px;
-        font-weight: bold;
+    <style>
+      .contact-hero {
         text-align: center;
-        ${
-          type === "success"
-            ? "background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb;"
-            : "background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb;"
-        }
-    `;
-
-        // Insert before the form
-        const form = document.getElementById("astro-form");
-        form.parentNode.insertBefore(messageEl, form);
-
-        // Auto remove after 5 seconds
-        setTimeout(() => {
-          if (messageEl.parentNode) {
-            messageEl.parentNode.removeChild(messageEl);
-          }
-        }, 5000);
+        padding: 3rem 2rem;
       }
 
-      // Optional: Add input validation styling
-      document
-        .querySelectorAll("#astro-form input, #astro-form textarea")
-        .forEach((input) => {
-          input.addEventListener("blur", function () {
-            if (this.value.trim() === "" && this.hasAttribute("required")) {
-              this.style.borderColor = "#dc3545";
-            } else {
-              this.style.borderColor = "";
-            }
-          });
+      .contact-hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        background: linear-gradient(135deg, var(--mystic-gold), #ffa500);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
 
-          input.addEventListener("input", function () {
-            if (this.value.trim() !== "") {
-              this.style.borderColor = "";
-            }
-          });
+      .contact-subtitle {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .contact-methods {
+        padding: 2rem 0;
+      }
+
+      .contact-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .contact-method-card {
+        background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.1);
+        padding: 2rem;
+        border-radius: 20px;
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+
+      .contact-method-card:hover {
+        transform: translateY(-10px);
+        border-color: rgba(255,215,0,0.3);
+        box-shadow: 0 10px 30px rgba(255,215,0,0.2);
+      }
+
+      .method-icon {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, var(--mystic-gold), #ffa500);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        font-size: 2rem;
+        color: var(--cosmic-purple);
+      }
+
+      .contact-method-card h3 {
+        margin-bottom: 0.5rem;
+        color: var(--mystic-gold);
+      }
+
+      .contact-method-card p {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .response-time {
+        display: block;
+        font-size: 0.9rem;
+        opacity: 0.7;
+        font-style: italic;
+      }
+
+      .contact-form-section {
+        padding: 3rem 0;
+      }
+
+      .form-row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .submit-button {
+        width: 100%;
+        background: linear-gradient(135deg, var(--mystic-gold), #ffa500);
+        color: var(--cosmic-purple);
+        padding: 1.2rem 2rem;
+        border: none;
+        border-radius: 30px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.8rem;
+        margin-top: 1rem;
+        font-family: var(--font-primary);
+      }
+
+      .submit-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(255,215,0,0.4);
+      }
+
+      .contact-note {
+        margin-top: 2rem;
+        padding: 1.5rem;
+        background: rgba(255,215,0,0.05);
+        border: 1px solid rgba(255,215,0,0.2);
+        border-radius: 15px;
+        text-align: center;
+      }
+
+      .contact-note p {
+        margin: 0;
+        font-size: 0.95rem;
+        opacity: 0.9;
+      }
+
+      .contact-info-section {
+        padding: 3rem 0;
+        background: rgba(0,0,0,0.2);
+      }
+
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .info-card {
+        background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.1);
+        padding: 2rem;
+        border-radius: 20px;
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+
+      .info-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(255,215,0,0.3);
+      }
+
+      .info-icon {
+        font-size: 3rem;
+        color: var(--mystic-gold);
+        margin-bottom: 1rem;
+      }
+
+      .info-card h3 {
+        margin-bottom: 1rem;
+        color: var(--mystic-gold);
+      }
+
+      .info-card p {
+        opacity: 0.9;
+        margin-bottom: 1.5rem;
+      }
+
+      .info-link {
+        color: var(--mystic-gold);
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .info-link:hover {
+        color: var(--soft-gold);
+        transform: translateX(5px);
+      }
+
+      @media screen and (max-width: 768px) {
+        .contact-hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .contact-subtitle {
+          font-size: 1.1rem;
+        }
+
+        .form-row {
+          grid-template-columns: 1fr;
+        }
+
+        .contact-cards,
+        .info-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+
+    <script>
+      // Form submission handling
+      const form = document.getElementById('astro-form');
+      form.addEventListener('submit', function(e) {
+        const submitButton = form.querySelector('.submit-button');
+        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        submitButton.disabled = true;
+      });
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
         });
+      });
     </script>
   </body>
 </html>

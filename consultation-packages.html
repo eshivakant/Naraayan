@@ -3,11 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Choose from our range of astrology consultation packages - from quick insights to comprehensive life analysis and personalized video consultations.">
     <title>Consultation Packages - Naraayan</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -21,139 +23,387 @@
         <span></span>
       </label>
       <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
         <li><a href="consultation-packages.html">Packages</a></li>
+        <li><a href="index.html#testimonials">Testimonials</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <main class="content">
-      <h1>Consultation Packages</h1>
-      <p class="packages-intro">
-        Choose the perfect package for your astrological journey
-      </p>
 
-      <!-- In consultation-packages.html, update the package buttons -->
+    <main class="content">
+      <div class="packages-hero">
+        <h1>Consultation Packages</h1>
+        <p class="packages-intro">
+          Choose the perfect package for your astrological journey. From quick insights to in-depth analysis, 
+          each consultation is personalized to address your unique needs and life questions.
+        </p>
+        <div class="package-categories">
+          <button class="category-btn active" data-category="all">All Packages</button>
+          <button class="category-btn" data-category="text">Text Consultations</button>
+          <button class="category-btn" data-category="video">Video Consultations</button>
+        </div>
+      </div>
+
       <div class="packages-grid">
-        <div class="package-card">
+        <!-- Quick Insight Package -->
+        <div class="package-card" data-category="text" id="quick">
           <div class="package-header">
             <span class="package-emoji">🔮</span>
             <h2>Quick Insight</h2>
             <div class="price">₹499</div>
-            <div class="delivery">Within 12 hours</div>
+            <div class="delivery"><i class="far fa-clock"></i> Within 12 hours</div>
           </div>
           <div class="package-content">
             <ul>
               <li>Short Lal Kitab chart overview</li>
               <li>3 core insights: career, relationship, health</li>
               <li>1 easy home-based remedy</li>
+              <li>Perfect for first-time users</li>
             </ul>
             <p class="package-note">Best for new users seeking quick clarity</p>
             <div class="package-delivery">
-              <span class="delivery-method">WhatsApp or email text reply</span>
+              <span class="delivery-method"><i class="fab fa-whatsapp"></i> WhatsApp or email text reply</span>
             </div>
-            <a
-              href="payment-quick-insight.html"
-              class="package-button"
-              >Get Started</a
-            >
+            <a href="payment-quick-insight.html" class="package-button">Get Started</a>
           </div>
         </div>
 
-        <div class="package-card featured">
+        <!-- Focused Consultation Package -->
+        <div class="package-card featured" data-category="text" id="focused">
           <div class="featured-tag">Most Popular</div>
           <div class="package-header">
             <span class="package-emoji">🪐</span>
             <h2>Focused Consultation</h2>
             <div class="price">₹999</div>
-            <div class="delivery">Within 24-36 hours</div>
+            <div class="delivery"><i class="far fa-clock"></i> Within 24-36 hours</div>
           </div>
           <div class="package-content">
             <ul>
               <li>Full analysis of one chosen area</li>
-              <li>Lal Kitab interpretation</li>
+              <li>Detailed Lal Kitab interpretation</li>
               <li>3-5 customized remedies</li>
               <li>Lucky color, direction, and day</li>
+              <li>Follow-up clarification included</li>
             </ul>
             <p class="package-note">Perfect for specific life questions</p>
             <div class="package-delivery">
-              <span class="delivery-method">Detailed text report</span>
+              <span class="delivery-method"><i class="fas fa-file-alt"></i> Detailed text report</span>
             </div>
-            <a
-              href="payment-focused-consultation.html"
-              class="package-button"
-              >Choose Plan</a
-            >
+            <a href="payment-focused-consultation.html" class="package-button">Choose Plan</a>
           </div>
         </div>
 
-        <!-- <div class="package-card">
+        <!-- 30-Minute Video Consultation -->
+        <div class="package-card video-package" data-category="video" id="video-30">
+          <div class="video-badge">🎥 NEW</div>
+          <div class="package-header">
+            <span class="package-emoji">📹</span>
+            <h2>30-Min Video Session</h2>
+            <div class="price">₹1,200</div>
+            <div class="delivery"><i class="far fa-calendar"></i> Scheduled within 48 hours</div>
+          </div>
+          <div class="package-content">
+            <ul>
+              <li>Live one-on-one video consultation</li>
+              <li>Discuss 2-3 major life areas</li>
+              <li>Instant answers to your questions</li>
+              <li>3-4 personalized Lal Kitab remedies</li>
+              <li>Session recording provided</li>
+              <li>Written summary via email</li>
+            </ul>
+            <p class="package-note">Interactive guidance for immediate clarity</p>
+            <div class="package-delivery">
+              <span class="delivery-method"><i class="fas fa-video"></i> Google Meet / Zoom / WhatsApp Video</span>
+            </div>
+            <a href="payment-video-30min.html" class="package-button">Book Session</a>
+          </div>
+        </div>
+
+        <!-- 1-Hour Video Consultation -->
+        <div class="package-card video-package premium" data-category="video" id="video-60">
+          <div class="featured-tag">Premium</div>
+          <div class="package-header">
+            <span class="package-emoji">⭐</span>
+            <h2>1-Hour Video Session</h2>
+            <div class="price">₹2,000</div>
+            <div class="delivery"><i class="far fa-calendar"></i> Scheduled within 48 hours</div>
+          </div>
+          <div class="package-content">
+            <ul>
+              <li>Comprehensive live consultation</li>
+              <li>Deep dive into multiple life areas</li>
+              <li>Complete birth chart analysis</li>
+              <li>7-10 detailed Lal Kitab remedies</li>
+              <li>Career, relationships, health & finance</li>
+              <li>Session recording + detailed PDF report</li>
+              <li>30-day follow-up support via WhatsApp</li>
+            </ul>
+            <p class="package-note">Most comprehensive personal guidance</p>
+            <div class="package-delivery">
+              <span class="delivery-method"><i class="fas fa-video"></i> Google Meet / Zoom / WhatsApp Video</span>
+            </div>
+            <a href="payment-video-60min.html" class="package-button">Book Session</a>
+          </div>
+        </div>
+
+        <!-- Annual Horoscope Package -->
+        <div class="package-card" data-category="text" id="annual">
           <div class="package-header">
             <span class="package-emoji">💫</span>
             <h2>Annual Horoscope</h2>
             <div class="price">₹1,499</div>
-            <div class="delivery">Within 48 hours</div>
+            <div class="delivery"><i class="far fa-clock"></i> Within 48 hours</div>
           </div>
           <div class="package-content">
             <ul>
               <li>12-month planetary movement analysis</li>
-              <li>Monthly highlights</li>
+              <li>Monthly highlights & predictions</li>
               <li>Favorable months chart</li>
+              <li>Important dates to watch</li>
               <li>3 simple year-long remedies</li>
             </ul>
-            <p class="package-note">Year-ahead forecast</p>
+            <p class="package-note">Year-ahead forecast and planning</p>
             <div class="package-delivery">
-              <span class="delivery-method">Written report format</span>
+              <span class="delivery-method"><i class="fas fa-file-pdf"></i> Written report format (PDF)</span>
             </div>
-            <a
-              href="payment-annual-horoscope.html"
-              class="package-button"
-              >Get Forecast</a
-            >
+            <a href="payment-annual-horoscope.html" class="package-button">Get Forecast</a>
           </div>
         </div>
 
-        <div class="package-card">
+        <!-- Full Life Analysis Package -->
+        <div class="package-card" data-category="text" id="full">
           <div class="package-header">
             <span class="package-emoji">🌟</span>
             <h2>Full Life Analysis</h2>
             <div class="price">₹1,999</div>
-            <div class="delivery">Within 48-72 hours</div>
+            <div class="delivery"><i class="far fa-clock"></i> Within 48-72 hours</div>
           </div>
           <div class="package-content">
             <ul>
               <li>Complete Lal Kitab reading</li>
               <li>Current Dasha + 5-year projection</li>
               <li>Karmic tendencies analysis</li>
+              <li>All life areas covered in depth</li>
               <li>7-10 targeted remedies</li>
+              <li>Comprehensive written report (15+ pages)</li>
             </ul>
-            <p class="package-note">Comprehensive life guidance</p>
+            <p class="package-note">Comprehensive life guidance & roadmap</p>
             <div class="package-delivery">
-              <span class="delivery-method">Detailed written report</span>
+              <span class="delivery-method"><i class="fas fa-file-pdf"></i> Detailed written report (PDF)</span>
             </div>
-            <a
-              href="payment-full-life-analysis.html"
-              class="package-button"
-              >Select Package</a
-            >
+            <a href="payment-full-life-analysis.html" class="package-button">Select Package</a>
           </div>
-        <--</div>-->
+        </div>
       </div>
+<!-- Process Section -->
       <section class="workflow-section">
-        <h2>Simple Process</h2>
+        <h2>Simple 3-Step Process</h2>
+        <p class="workflow-subtitle">Get your personalized astrological guidance in three easy steps</p>
         <div class="workflow-steps">
           <div class="step">
             <div class="step-number">1</div>
-            <p>Share your personal details</p>
+            <div class="step-icon"><i class="fas fa-calendar-alt"></i></div>
+            <h3>Choose & Book</h3>
+            <p>Select your package and complete the secure payment</p>
           </div>
+          <div class="step-arrow">→</div>
           <div class="step">
             <div class="step-number">2</div>
-            <p>Pay for your package</p>
+            <div class="step-icon"><i class="fas fa-user-circle"></i></div>
+            <h3>Share Details</h3>
+            <p>Provide your birth details and questions via form or email</p>
           </div>
+          <div class="step-arrow">→</div>
           <div class="step">
             <div class="step-number">3</div>
-            <p>Receive your reading</p>
+            <div class="step-icon"><i class="fas fa-star"></i></div>
+            <h3>Receive Guidance</h3>
+            <p>Get your personalized reading within the turnaround time</p>
           </div>
         </div>
       </section>
+
+      <!-- Comparison Section -->
+      <section class="comparison-section">
+        <h2>Compare Packages</h2>
+        <div class="comparison-table-container">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Features</th>
+                <th>Quick Insight</th>
+                <th>Focused</th>
+                <th>30-Min Video</th>
+                <th>1-Hour Video</th>
+                <th>Annual</th>
+                <th>Full Life</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Price</td>
+                <td>₹499</td>
+                <td>₹999</td>
+                <td>₹1,200</td>
+                <td>₹2,000</td>
+                <td>₹1,499</td>
+                <td>₹1,999</td>
+              </tr>
+              <tr>
+                <td>Delivery Time</td>
+                <td>12 hours</td>
+                <td>24-36 hours</td>
+                <td>Scheduled</td>
+                <td>Scheduled</td>
+                <td>48 hours</td>
+                <td>48-72 hours</td>
+              </tr>
+              <tr>
+                <td>Live Interaction</td>
+                <td>✗</td>
+                <td>✗</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✗</td>
+                <td>✗</td>
+              </tr>
+              <tr>
+                <td>Life Areas Covered</td>
+                <td>3 areas</td>
+                <td>1 area deep</td>
+                <td>2-3 areas</td>
+                <td>All areas</td>
+                <td>All (year)</td>
+                <td>All areas</td>
+              </tr>
+              <tr>
+                <td>Remedies Included</td>
+                <td>1</td>
+                <td>3-5</td>
+                <td>3-4</td>
+                <td>7-10</td>
+                <td>3</td>
+                <td>7-10</td>
+              </tr>
+              <tr>
+                <td>Follow-up Support</td>
+                <td>✗</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>30 days</td>
+                <td>✗</td>
+                <td>✓</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Trust Section -->
+      <section class="trust-section">
+        <h2>Why Clients Trust Us</h2>
+        <div class="trust-grid">
+          <div class="trust-item">
+            <div class="trust-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3>100% Confidential</h3>
+            <p>Your personal information is completely secure and private</p>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon"><i class="fas fa-medal"></i></div>
+            <h3>Proven Accuracy</h3>
+            <p>500+ satisfied clients with consistently positive feedback</p>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon"><i class="fas fa-headset"></i></div>
+            <h3>Dedicated Support</h3>
+            <p>Responsive customer service for all your queries</p>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon"><i class="fas fa-certificate"></i></div>
+            <h3>Certified Expertise</h3>
+            <p>10+ years of professional Vedic astrology practice</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="packages-cta">
+        <h2>Still Have Questions?</h2>
+        <p>Not sure which package is right for you? Get in touch and I'll help you choose!</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="package-button">Contact Me</a>
+          <a href="index.html#faq" class="package-button secondary">View FAQ</a>
+        </div>
+      </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Naraayan</h3>
+            <p>Expert Vedic Astrology & Lal Kitab Consultations</p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html#about">About</a></li>
+              <li><a href="index.html#services">Services</a></li>
+              <li><a href="consultation-packages.html">Packages</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#quick">Quick Insight</a></li>
+              <li><a href="#focused">Focused Consultation</a></li>
+              <li><a href="#video-30">Video Consultations</a></li>
+              <li><a href="#full">Full Life Analysis</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Naraayan. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Package filtering
+      const categoryButtons = document.querySelectorAll('.category-btn');
+      const packageCards = document.querySelectorAll('.package-card');
+
+      categoryButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const category = button.getAttribute('data-category');
+          
+          categoryButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+          
+          packageCards.forEach(card => {
+            if (category === 'all' || card.getAttribute('data-category') === category) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    </script>
   </body>
 </html>
